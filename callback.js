@@ -79,17 +79,17 @@ import axios  from "axios";
 //   console.log("post2", post2);
 // })();
 
-// (async () => {
-//   const {data: users} = await axios("https://jsonplaceholder.typicode.com/users");
+(async () => {
+  const {data: users} = await axios("https://jsonplaceholder.typicode.com/users");
 
-//   const {data: post1} = await axios("https://jsonplaceholder.typicode.com/posts/1");
+  const {data: post1} = await axios("https://jsonplaceholder.typicode.com/posts/1");
 
-//   const {data: post2} =await axios("https://jsonplaceholder.typicode.com/posts/2");
+  const {data: post2} =await axios("https://jsonplaceholder.typicode.com/posts/2");
 
-//   console.log("users", users);
-//   console.log("post1", post1);
-//   console.log("post2", post2);
-// })();
+  console.log("users", users);
+  console.log("post1", post1);
+  console.log("post2", post2);
+})();
 
 // const getComments = () =>{
 //   return new Promise((resolve,reject) =>{
@@ -138,22 +138,22 @@ import axios  from "axios";
 // .catch((e) => console.log(e));
 
 
-const getusers = () =>{
-  return new Promise(async(resolve,reject) =>{
+// const getusers = () =>{
+//   return new Promise(async(resolve,reject) =>{
   
-    const {data} = await axios("https://jsonplaceholder.typicode.com/users");
-    resolve(data);
-    // reject('Hata Oluştu');
-  });
-};
-const getPost  = (post_id) =>{
-  return new Promise(async(resolve,reject) =>{
+//     const {data} = await axios("https://jsonplaceholder.typicode.com/users");
+//     resolve(data);
+//     // reject('Hata Oluştu');
+//   });
+// };
+// const getPost  = (post_id) =>{
+//   return new Promise(async(resolve,reject) =>{
   
-    const {data} = await axios("https://jsonplaceholder.typicode.com/posts/" + post_id);
-    resolve(data);
-    // reject('Bir hata daha oluştu')
-  });
-};
+//     const {data} = await axios("https://jsonplaceholder.typicode.com/posts/" + post_id);
+//     resolve(data);
+//     // reject('Bir hata daha oluştu')
+//   });
+// };
 
 //  (async () =>{
 //  await  getPost(1)
@@ -183,7 +183,7 @@ const getPost  = (post_id) =>{
 // }
 // })();
 
-Promise.all([getusers,getPost(1)]).then(console.log).catch(console.log)
+// Promise.all([getusers,getPost(1)]).then(console.log).catch(console.log)
 
 
 
